@@ -85,6 +85,7 @@ function loadPortfolio() {
     scrollerEl.style.display = 'none';
     const wrapper = document.createElement('div');
     wrapper.className = 'pt-wrapper';
+    wrapper.style.touchAction = 'pan-y';
     wrapper.appendChild(largeTrack);
     wrapper.appendChild(smallTrack);
     showcase.insertBefore(wrapper, scrollerEl);
@@ -174,15 +175,22 @@ function loadPortfolio() {
         });
     }
 
-    // Swipe / drag
+    // Swipe / drag (mobilon ujjal is)
     let dragStartX = null;
-    wrapper.addEventListener('pointerdown', e => { dragStartX = e.clientX; });
-    wrapper.addEventListener('pointerup', e => {
+    let dragStartY = null;
+    function endDrag(clientX) {
         if (dragStartX === null) return;
-        const dx = dragStartX - e.clientX;
+        const dx = dragStartX - clientX;
         if (Math.abs(dx) > 40) goTo(currentSlide + (dx > 0 ? 1 : -1));
         dragStartX = null;
+        dragStartY = null;
+    }
+    wrapper.addEventListener('pointerdown', e => {
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
     });
+    wrapper.addEventListener('pointerup', e => endDrag(e.clientX));
+    wrapper.addEventListener('pointercancel', () => { dragStartX = null; dragStartY = null; });
 
     applyPositions(0, 0);
 }
@@ -241,37 +249,6 @@ function loadBento() {
             tile.innerHTML = `<div class="ft-img" style="background-image:url('assets/portfolio/${item.file}')"></div><div class="ft-overlay"><h3>${item.title || ''}</h3><p class="ft-sub">${item.desc || ''}</p></div>`;
             grid.appendChild(tile);
         });
-    });
-}
-
-/* ── YOUTUBE ── */
-const YT_CONFIG = {
-    apiKey: 'AIzaSyDbBv2l0mTAo27NikydbfyBM3ekudBdOi0',
-    channelId: 'UCpEdGmtM5LQxc4lfZq-8S8A',
-    maxResults: 6,
-    fallbackIds: ['dQw4w9WgXcQ', 'dQw4w9WgXcQ']
-};
-
-async function loadVideos() {
-    try {
-        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${YT_CONFIG.apiKey}&channelId=${YT_CONFIG.channelId}&part=snippet,id&order=date&maxResults=${YT_CONFIG.maxResults}&type=video`);
-        const data = await res.json();
-        if (data.items && data.items.length > 0) {
-            const ids = data.items.filter(i => i.id.videoId).map(i => i.id.videoId).slice(0, YT_CONFIG.maxResults);
-            renderVideos(ids);
-        } else { renderVideos(YT_CONFIG.fallbackIds); }
-    } catch (e) { renderVideos(YT_CONFIG.fallbackIds); }
-}
-
-function renderVideos(ids) {
-    const list = document.getElementById('video-list');
-    if (!list) return;
-    list.innerHTML = '';
-    ids.forEach(id => {
-        const div = document.createElement('article');
-        div.className = 'video-card';
-        div.innerHTML = `<div class="video-container"><iframe src="https://www.youtube.com/embed/${id}?modestbranding=1&rel=0" allowfullscreen></iframe></div>`;
-        list.appendChild(div);
     });
 }
 
@@ -392,8 +369,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setupContactActions();
     setupHeroCta();
     setupCookieBanner();
-
-    // if (document.getElementById('video-list')) loadVideos(); // Képes megjelenítés – videókat a HTML tartalmazza
 
     const sectionObs = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
