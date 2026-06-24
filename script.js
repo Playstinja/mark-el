@@ -267,9 +267,7 @@ function loadBento() {
 
 /* ── SZOLGÁLTATÁSOK KATEGÓRIA-SÁV ── */
 function setupServiceCats() {
-    const cats = document.getElementById('service-cats');
-    if (!cats) return;
-    cats.querySelectorAll('a[href^="#"]').forEach(link => {
+    document.querySelectorAll('#service-cats a[href^="#"], #rolam-cats a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const target = document.getElementById(link.getAttribute('href').slice(1));

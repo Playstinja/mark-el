@@ -144,7 +144,7 @@ section { padding: 0; transition: var(--transition); }
     pointer-events: none;
     background:
         radial-gradient(60% 70% at 20% 24%, rgba(1, 53, 172, 0.05), transparent 60%),
-		radial-gradient(65% 75% at 82% 78%, rgba(1, 53, 172, 0.05), transparent 60%);
+        radial-gradient(65% 75% at 82% 78%, rgba(1, 53, 172, 0.05), transparent 60%);
 }
 .hero-content { position: relative; z-index: 2; padding: 0 20px; }
 .hero-logo { max-width: 500px; width: 80%; margin-bottom: 28px; }
@@ -540,25 +540,25 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 }
 
 /* ── RÓLAM OLDAL ── */
-.rolam-screen { display: flex; flex-direction: column; min-height: 100vh; }
-.rolam-screen .about-hero { flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; padding-top: var(--nav-height); box-sizing: border-box; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: stretch; max-width: 1200px; width: 100%; margin: 0 auto; padding: 20px 30px; box-sizing: border-box; }
-.about-photo { display: flex; align-items: flex-end; justify-content: center; min-height: 0; }
-.about-photo img { max-height: 74vh; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; transform: translateY(30px); }
+.rolam-main { padding-top: var(--nav-height); }
+.page-rolam { display: flex; flex-direction: column; min-height: 100vh; }
+.page-rolam .rolam-main { flex: 1 0 auto; display: flex; flex-direction: column; }
+.page-rolam .about-hero { flex: 1 1 auto; }
+.page-rolam footer { flex-shrink: 0; }
+.about-hero { display: flex; align-items: center; padding: 20px 0 40px; box-sizing: border-box; }
+.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; max-width: 1300px; width: 100%; margin: 0 auto; padding: 10px 30px; box-sizing: border-box; }
+.about-photo { display: flex; align-items: flex-end; justify-content: center; position: relative; top: 50px; }
+.about-photo img { max-height: 120vh; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
 .about-text { display: flex; flex-direction: column; justify-content: center; text-align: left; }
-.about-text .hello { font-size: 5rem; font-weight: 700; line-height: 1; margin: 0 0 24px; color: var(--text); letter-spacing: -0.02em; }
+.about-text .hello { font-size: 3.4rem; font-weight: 700; line-height: 1.06; margin: 0 0 24px; color: var(--text); letter-spacing: -0.02em; }
 .about-text p { font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: var(--text-soft); margin: 0 0 14px; }
 
-@media (min-width: 769px) {
-    .rolam-screen { height: 100vh; overflow: hidden; }
-    .rolam-screen footer { flex: 0 0 auto; }
-}
 @media (max-width: 768px) {
-    .rolam-screen .about-hero { padding-top: 90px; padding-bottom: 40px; }
+    .about-hero { min-height: 0; padding: 24px 0 40px; }
     .about-grid { grid-template-columns: 1fr; gap: 24px; }
     .about-photo img { max-height: 44vh; }
     .about-text { text-align: center; }
-    .about-text .hello { font-size: 3.2rem; }
+    .about-text .hello { font-size: 2.5rem; }
 }
 
 /* ── YOUTUBE OLDAL ── */
