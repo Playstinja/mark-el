@@ -545,9 +545,9 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 .page-rolam .rolam-main { flex: 1 0 auto; display: flex; flex-direction: column; }
 .page-rolam .about-hero { flex: 1 1 auto; }
 .page-rolam footer { flex-shrink: 0; }
-.about-hero { display: flex; align-items: center; padding: 20px 0 40px; box-sizing: border-box; }
-.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; max-width: 1300px; width: 100%; margin: 0 auto; padding: 10px 30px; box-sizing: border-box; }
-.about-photo { display: flex; align-items: flex-end; justify-content: center; position: relative; top: 50px; }
+.about-hero { display: flex; align-items: stretch; padding: 20px 0 0; box-sizing: border-box; }
+.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: stretch; max-width: 1300px; width: 100%; margin: 0 auto; padding: 0 30px; box-sizing: border-box; }
+.about-photo { display: flex; align-items: flex-end; justify-content: center; }
 .about-photo img { max-height: 120vh; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
 .about-text { display: flex; flex-direction: column; justify-content: center; text-align: left; }
 .about-text .hello { font-size: 3.4rem; font-weight: 700; line-height: 1.06; margin: 0 0 24px; color: var(--text); letter-spacing: -0.02em; }
