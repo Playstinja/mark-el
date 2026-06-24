@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add('js');</script>
+    <title>Mark-EL | Szolgáltatások</title>
+    <meta name="description" content="Grafikai tervezés, tartalomgyártás, projekt- és folyamatmenedzsment, nyomdai kivitelezés. Egy ember, a teljes folyamat.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Főoldal</a>
+                <a href="szolgaltatasok.html" class="active">Szolgáltatások</a>
+                <a href="portfolio.html">Portfólió</a>
+                <a href="youtube.html">YouTube</a>
+                <a href="rolam.html">Rólam</a>
+                <a href="kapcsolat.html">Kapcsolat</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="subpage container">
+        <h2 class="section-title">Szolgáltatásaim</h2>
+
+        <div class="service-block reveal">
+            <div class="service-img" style="background-image:url('assets/work/tartalomgyartas.webp')"></div>
+            <div class="service-text">
+                <h3>Tartalomgyártás</h3>
+                <p>Videós és online tartalom, ami megállítja a görgetést. Thumbnailtől a narráción át a social kreatívokig, gyártásra kész minőségben.</p>
+                <ul>
+                    <li>Videós vizuálok</li>
+                    <li>YouTube thumbnail</li>
+                    <li>Narráció</li>
+                    <li>Szövegírás</li>
+                    <li>Social média kreatívok</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-block reverse reveal from-right">
+            <div class="service-img" style="background-image:url('assets/work/grafikai-tervezes.webp')"></div>
+            <div class="service-text">
+			<h3>Grafikai tervezés</h3>
+                <p>Az arculattól a kész kreatívig. Olyan vizuális anyagokat tervezek, amik következetesek, használhatók, és a célt szolgálják, nem csak szépek.</p>
+                <ul>
+                    <li>Arculatok</li>
+                    <li>Kiadványok</li>
+                    <li>Csomagolások</li>
+                    <li>Online kreatívok</li>
+                    <li>Marketinganyagok</li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="service-block reveal">
+            <div class="service-img" style="background-image:url('assets/work/rendszerepites.webp')"></div>
+            <div class="service-text">
+                <h3>Projekt- és folyamatmenedzsment</h3>
+                <p>Tizennyolc év alatt megtanultam, hogyan kell egy projektet végigvinni. Munkafolyamatokat alakítok ki, koordinálom a gyártást, és ahol lehet, automatizálok, hogy gyorsabb és kiszámíthatóbb legyen az eredmény.</p>
+                <ul>
+                    <li>Munkafolyamatok kialakítása</li>
+                    <li>AI-alapú automatizáció</li>
+                    <li>Gyártási folyamatok koordinációja</li>
+                    <li>Projektkövetés</li>
+                    <li>Hatékonyságnövelés</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-block reverse reveal from-right">
+            <div class="service-img" style="background-image:url('assets/work/nyomdai-kivitelezes.webp')"></div>
+            <div class="service-text">
+                <h3>Nyomdai kivitelezés</h3>
+                <p>A tervezés nálam nem ér véget a fájlnál. Gyártás-előkészítéstől a nyomdai felügyeletig viszem végig, hogy ami a képernyőn van, a valóságban is pontosan úgy szülessen meg.</p>
+                <ul>
+                    <li>Gyártás-előkészítés</li>
+                    <li>Nyomdai koordináció</li>
+                    <li>Nagyformátumú anyagok</li>
+                    <li>Gyártási folyamatok felügyelete</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@mark-el" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.linkedin.com/in/mark-lehoczki/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/marklehoczki/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <p class="footer-legal">
+            &copy; 2026 Mark-EL. Minden jog fenntartva.&nbsp;
+            <span class="footer-links">
+                <a href="impresszum.html">Impresszum</a>
+                <span class="sep">|</span>
+                <a href="adatkezeles.html">Adatkezelési tájékoztató</a>
+            </span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <button id="backToTop" aria-label="Vissza a tetejére">
+        <svg viewBox="0 0 24 24" width="22" height="22" style="pointer-events:none;">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="white"/>
+        </svg>
+    </button>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add('js');</script>
+    <title>Mark-EL | Kapcsolat</title>
+    <meta name="description" content="Van egy projekted? Keress meg közvetlenül. Grafikai tervezés, arculat, tartalomgyártás, nyomdai kivitelezés.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Főoldal</a>
+                <a href="szolgaltatasok.html">Szolgáltatások</a>
+                <a href="portfolio.html">Portfólió</a>
+                <a href="youtube.html">Youtube</a>
+                <a href="rolam.html">Rólam</a>
+                <a href="kapcsolat.html" class="active">Kapcsolat</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="subpage container contact-page">
+        <h1 class="section-title">Kapcsolat</h1>
+        <p class="contact-lead">Van egy projekted? Keress meg közvetlenül.</p>
+        <p class="contact-focus">Grafikai tervezés, arculat, tartalomgyártás, nyomdai kivitelezés.</p>
+
+        <div class="contact-actions">
+            <a href="#" id="contact-mail" class="cta-button">Írj nekem</a>
+            <a href="#" id="contact-phone" class="btn-ghost">Hívj fel</a>
+        </div>
+
+        <div class="contact-meta">
+            <div class="contact-meta-item">
+                <span class="cm-label">Válaszidő</span>
+                <span class="cm-value">Általában 24 órán belül válaszolok</span>
+            </div>
+            <div class="contact-meta-item">
+                <span class="cm-label">Elérhetőség</span>
+                <span class="cm-value">Hétfő&ndash;péntek, 8:00&ndash;17:00</span>
+                <span class="cm-value">Szombat: 9:00&ndash;12:00</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@mark-el" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.linkedin.com/in/mark-lehoczki/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/marklehoczki/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <p class="footer-legal">
+            &copy; 2026 Mark-EL. Minden jog fenntartva.&nbsp;
+            <span class="footer-links">
+                <a href="impresszum.html">Impresszum</a>
+                <span class="sep">|</span>
+                <a href="adatkezeles.html">Adatkezelési tájékoztató</a>
+            </span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <button id="backToTop" aria-label="Vissza a tetejére">
+        <svg viewBox="0 0 24 24" width="22" height="22" style="pointer-events:none;">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="white"/>
+        </svg>
+    </button>
+</body>
+</html>

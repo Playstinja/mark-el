@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add('js');</script>
+    <title>Mark-EL | Rólam</title>
+    <meta name="description" content="Lehoczki Márk, grafikus 18 év tapasztalattal a kreatív és nyomdai iparban.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Főoldal</a>
+                <a href="szolgaltatasok.html">Szolgáltatások</a>
+                <a href="portfolio.html">Portfólió</a>
+                <a href="youtube.html">Youtube</a>
+                <a href="rolam.html" class="active">Rólam</a>
+                <a href="kapcsolat.html">Kapcsolat</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="rolam-screen">
+        <section class="about-hero">
+            <div class="about-grid">
+                <div class="about-photo reveal">
+                    <img src="assets/mark-el-profile.webp" alt="Lehoczki Márk" onerror="this.style.display='none'">
+                </div>
+                <div class="about-text">
+                    <h1 class="hello">Hello</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@mark-el" target="_blank" rel="noopener">YouTube</a>
+                <a href="https://www.linkedin.com/in/mark-lehoczki/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.instagram.com/marklehoczki/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+            <p class="footer-legal">
+                &copy; 2026 Mark-EL. Minden jog fenntartva.&nbsp;
+                <span class="footer-links">
+                    <a href="impresszum.html">Impresszum</a>
+                    <span class="sep">|</span>
+                    <a href="adatkezeles.html">Adatkezelési tájékoztató</a>
+                </span>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+    <button id="backToTop" aria-label="Vissza a tetejére">
+        <svg viewBox="0 0 24 24" width="22" height="22" style="pointer-events:none;">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="white"/>
+        </svg>
+    </button>
+</body>
+</html>

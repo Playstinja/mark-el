@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add('js');</script>
+    <title>Mark-EL | YouTube</title>
+    <meta name="description" content="A Mark-EL YouTube csatorna: film, sorozat, geek kultúra, mélységében. Karakterelemzések, retrospektívek, élménybeszámolók.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Főoldal</a>
+                <a href="szolgaltatasok.html">Szolgáltatások</a>
+                <a href="portfolio.html">Portfólió</a>
+                <a href="youtube.html" class="active">YouTube</a>
+                <a href="rolam.html">Rólam</a>
+                <a href="kapcsolat.html">Kapcsolat</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="yt-hero">
+        <div class="container">
+            <span class="yt-kicker">Mark-EL a YouTube-on</span>
+            <h1>Film, sorozat, geek kultúra</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. [Ide jön az egy éves sztori.]</p>
+            <a href="https://www.youtube.com/@mark-el?sub_confirmation=1" target="_blank" rel="noopener" class="btn-youtube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                Feliratkozás
+            </a>
+        </div>
+    </section>
+
+    <section class="yt-section">
+        <div class="container">
+            <h2 class="section-title">Legfrissebb videóm</h2>
+            <div class="video-featured">
+                <a href="https://www.youtube.com/watch?v=mtejjB9E65Y" target="_blank" rel="noopener" class="video-thumb-link">
+                    <div class="video-container">
+                        <img src="assets/youtube/legfrissebb.webp" alt="Legfrissebb videóm" class="video-thumb-img">
+                        <div class="video-play-btn" aria-hidden="true">
+                            <svg viewBox="0 0 68 48"><path d="M66.52 7.74C65.7 4.66 63.24 2.2 60.16 1.38 54.9 0 34 0 34 0S13.1 0 7.84 1.38C4.76 2.2 2.3 4.66 1.48 7.74 0 13.06 0 24 0 24s0 10.94 1.48 16.26c.82 3.08 3.28 5.54 6.36 6.36C13.1 48 34 48 34 48s20.9 0 26.16-1.38c3.08-.82 5.54-3.28 6.36-6.36C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" fill="#ff0000"/><path d="M45 24L27 14v20z" fill="#fff"/></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="yt-section">
+        <div class="container">
+            <h2 class="section-title">Legnépszerűbb videóim</h2>
+            <div id="video-list">
+
+                <article class="video-card">
+                    <a href="https://www.youtube.com/watch?v=wYqw1dn8lv8" target="_blank" rel="noopener" class="video-thumb-link">
+                        <div class="video-container">
+                            <img src="assets/youtube/nepszeru-1.webp" alt="Legnépszerűbb videó 1" class="video-thumb-img">
+                            <div class="video-play-btn" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.52 7.74C65.7 4.66 63.24 2.2 60.16 1.38 54.9 0 34 0 34 0S13.1 0 7.84 1.38C4.76 2.2 2.3 4.66 1.48 7.74 0 13.06 0 24 0 24s0 10.94 1.48 16.26c.82 3.08 3.28 5.54 6.36 6.36C13.1 48 34 48 34 48s20.9 0 26.16-1.38c3.08-.82 5.54-3.28 6.36-6.36C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" fill="#ff0000"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+                            <div class="video-views">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                                <span data-views="17k">17k</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="video-title">Battle Beast: Akitől még a Viltrumiak is tartanak | Invincible karakter-elemzés</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="https://www.youtube.com/watch?v=HoPc0v2nUDE" target="_blank" rel="noopener" class="video-thumb-link">
+                        <div class="video-container">
+                            <img src="assets/youtube/nepszeru-2.webp" alt="Legnépszerűbb videó 2" class="video-thumb-img">
+                            <div class="video-play-btn" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.52 7.74C65.7 4.66 63.24 2.2 60.16 1.38 54.9 0 34 0 34 0S13.1 0 7.84 1.38C4.76 2.2 2.3 4.66 1.48 7.74 0 13.06 0 24 0 24s0 10.94 1.48 16.26c.82 3.08 3.28 5.54 6.36 6.36C13.1 48 34 48 34 48s20.9 0 26.16-1.38c3.08-.82 5.54-3.28 6.36-6.36C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" fill="#ff0000"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+                            <div class="video-views">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                                <span data-views="15k">15k</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="video-title">Thragg: A Viltrumi, Akitől Még Omni-Man Is Retteg | Invincible karakter-elemzés</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="https://www.youtube.com/watch?v=_EzL6zJ1ltE" target="_blank" rel="noopener" class="video-thumb-link">
+                        <div class="video-container">
+                            <img src="assets/youtube/nepszeru-3.webp" alt="Legnépszerűbb videó 3" class="video-thumb-img">
+                            <div class="video-play-btn" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.52 7.74C65.7 4.66 63.24 2.2 60.16 1.38 54.9 0 34 0 34 0S13.1 0 7.84 1.38C4.76 2.2 2.3 4.66 1.48 7.74 0 13.06 0 24 0 24s0 10.94 1.48 16.26c.82 3.08 3.28 5.54 6.36 6.36C13.1 48 34 48 34 48s20.9 0 26.16-1.38c3.08-.82 5.54-3.28 6.36-6.36C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" fill="#ff0000"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+                            <div class="video-views">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                                <span data-views="11k">11k</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="video-title">Deadpool: A Marvel Legtragikusabb Hőse</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#" target="_blank" rel="noopener" class="video-thumb-link">
+                        <div class="video-container">
+                            <img src="assets/youtube/nepszeru-4.webp" alt="Legnépszerűbb videó 4" class="video-thumb-img">
+                            <div class="video-play-btn" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.52 7.74C65.7 4.66 63.24 2.2 60.16 1.38 54.9 0 34 0 34 0S13.1 0 7.84 1.38C4.76 2.2 2.3 4.66 1.48 7.74 0 13.06 0 24 0 24s0 10.94 1.48 16.26c.82 3.08 3.28 5.54 6.36 6.36C13.1 48 34 48 34 48s20.9 0 26.16-1.38c3.08-.82 5.54-3.28 6.36-6.36C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" fill="#ff0000"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+                            <div class="video-views">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                                <span data-views="0">0</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="video-title">Új videó helye</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#" target="_blank" rel="noopener" class="video-thumb-link">
+                        <div class="video-container">
+                            <img src="assets/youtube/nepszeru-5.webp" alt="Legnépszerűbb videó 5" class="video-thumb-img">
+                            <div class="video-play-btn" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.52 7.74C65.7 4.66 63.24 2.2 60.16 1.38 54.9 0 34 0 34 0S13.1 0 7.84 1.38C4.76 2.2 2.3 4.66 1.48 7.74 0 13.06 0 24 0 24s0 10.94 1.48 16.26c.82 3.08 3.28 5.54 6.36 6.36C13.1 48 34 48 34 48s20.9 0 26.16-1.38c3.08-.82 5.54-3.28 6.36-6.36C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" fill="#ff0000"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+                            <div class="video-views">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                                <span data-views="0">0</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="video-title">Új videó helye</p>
+                </article>
+
+                <article class="video-card">
+                    <a href="#" target="_blank" rel="noopener" class="video-thumb-link">
+                        <div class="video-container">
+                            <img src="assets/youtube/nepszeru-6.webp" alt="Legnépszerűbb videó 6" class="video-thumb-img">
+                            <div class="video-play-btn" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.52 7.74C65.7 4.66 63.24 2.2 60.16 1.38 54.9 0 34 0 34 0S13.1 0 7.84 1.38C4.76 2.2 2.3 4.66 1.48 7.74 0 13.06 0 24 0 24s0 10.94 1.48 16.26c.82 3.08 3.28 5.54 6.36 6.36C13.1 48 34 48 34 48s20.9 0 26.16-1.38c3.08-.82 5.54-3.28 6.36-6.36C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" fill="#ff0000"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+                            <div class="video-views">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                                <span data-views="0">0</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="video-title">Új videó helye</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="stats-bar">
+        <div class="container">
+            <h2 class="section-title">Számokban</h2>
+            <p class="section-sub">Szerény feliratkozószám, mégis stabil nézettség és kiemelkedő nézési idő.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="250000">0</span>
+                    <span class="stat-label">Havi megtekintés</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="28" data-suffix="%">0</span>
+                    <span class="stat-label">Átlagos CTR</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5" data-suffix=" perc">0</span>
+                    <span class="stat-label">Átlagos nézési idő</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1500" data-suffix="+">0</span>
+                    <span class="stat-label">Megtekintés / videó</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="yt-section yt-partner">
+        <div class="container">
+            <h2 class="section-title">Együttműködés</h2>
+            <p>Márka, ügynökség vagy szponzor vagy? Elkötelezett, niche közönség és erős nézési idő. Beszéljünk egy lehetséges együttműködésről.</p>
+            <a href="kapcsolat.html" class="cta-button">Kapcsolat</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@mark-el" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.linkedin.com/in/mark-lehoczki/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/marklehoczki/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <p class="footer-legal">
+            &copy; 2026 Mark-EL. Minden jog fenntartva.&nbsp;
+            <span class="footer-links">
+                <a href="impresszum.html">Impresszum</a>
+                <span class="sep">|</span>
+                <a href="adatkezeles.html">Adatkezelési tájékoztató</a>
+            </span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <button id="backToTop" aria-label="Vissza a tetejére">
+        <svg viewBox="0 0 24 24" width="22" height="22" style="pointer-events:none;">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="white"/>
+        </svg>
+    </button>
+</body>
+</html>

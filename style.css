@@ -1,0 +1,648 @@
+:root {
+    --bg: #f0f0f0;
+    --surface: #ffffff;
+    --text: #1d1d1f;
+    --text-soft: #1d1d1f;
+    --accent: #0135ac;
+    --accent-end: #7409d7;
+    --border: #d2d2d7;
+    --nav-bg: rgba(11, 11, 11, 0.82);
+    --radius: 18px;
+    --font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Roboto', Arial, sans-serif;
+    --nav-height: 48px;
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html { scroll-behavior: smooth; box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-weight: 400;
+    margin: 0; padding: 0;
+    width: 100%; max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { pointer-events: none; -webkit-user-drag: none; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+
+.section-title { font-family: var(--font-heading); }
+.cta-button { font-family: var(--font-heading); }
+.btn-ghost { font-family: var(--font-heading); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
+
+.section-title {
+    color: var(--text);
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin: 0 0 18px;
+    display: block;
+    width: 100%;
+    letter-spacing: -0.02em;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: var(--nav-height);
+    background-color: var(--nav-bg);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 1000;
+    transition: box-shadow 0.35s ease;
+}
+.navbar.scrolled { box-shadow: 0 1px 0 rgba(0,0,0,0.18); }
+.nav-container {
+    max-width: 1100px; height: 100%;
+    margin: 0 auto; padding: 0 25px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+}
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a {
+    color: #d8d8db;
+    text-decoration: none;
+    font-weight: 400; font-size: 0.74rem;
+    text-transform: uppercase; letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: #ffffff; }
+
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 28px; height: 20px; position: relative; padding: 0; }
+.nav-toggle span { display: block; position: absolute; left: 0; width: 100%; height: 1.5px; background: #d8d8db; transition: all 0.3s ease; }
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.nav-toggle span:nth-child(3) { bottom: 0; }
+.nav-toggle.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+/* ── BUTTONS ── */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(30deg, var(--accent), var(--accent-end));
+    color: #ffffff !important;
+    padding: 14px 34px;
+    text-decoration: none !important;
+    border-radius: 980px;
+    font-family: var(--font);
+    font-size: 0.95rem; font-weight: 400;
+    border: none; cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.35s ease;
+}
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 28px rgba(116, 9, 215, 0.35);
+}
+
+.btn-ghost {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent) !important;
+    padding: 13px 32px;
+    text-decoration: none !important;
+    border: 1.5px solid var(--accent);
+    border-radius: 980px;
+    font-family: var(--font);
+    font-size: 0.95rem;
+    transition: transform 0.25s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn-ghost:hover {
+    transform: scale(1.05);
+    background: linear-gradient(30deg, var(--accent), var(--accent-end));
+    border-color: transparent;
+    color: #fff !important;
+}
+
+/* ── SECTIONS ── */
+section { padding: 0; transition: var(--transition); }
+.js section { opacity: 0; transform: translateY(20px); }
+.js section.visible { opacity: 1; transform: translateY(0); }
+
+/* ── HERO ── */
+.hero {
+    min-height: 92vh;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    padding-top: var(--nav-height);
+    background: var(--bg);
+}
+.hero-content { position: relative; z-index: 2; padding: 0 20px; }
+.hero-logo { max-width: 500px; width: 80%; margin-bottom: 28px; }
+.hero-tagline {
+    font-size: 2rem; font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+.hero-sub {
+    font-size: 1.1rem; font-weight: 300;
+    color: var(--text-soft);
+    margin: 0 auto 36px;
+    max-width: 520px;
+    font-style: italic;
+}
+
+/* ── FEATURES (SZOLGÁLTATÁSAIM) ── */
+#features { padding: 70px 0 0; }
+.features-header { margin-bottom: 32px; }
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.feature-tile {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    aspect-ratio: 16 / 9;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ft-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.35s ease, transform 0.45s ease;
+}
+
+.feature-tile:hover .ft-img {
+    filter: blur(4px) brightness(0.55);
+    transform: scale(1.03);
+}
+
+.ft-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.feature-tile:hover .ft-overlay { opacity: 1; }
+
+.ft-overlay h3 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+}
+
+.ft-overlay .ft-sub {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin: 0;
+    max-width: 340px;
+    line-height: 1.5;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+
+/* ── MUNKÁIM SLIDESHOW ── */
+#works { padding: 50px 0 60px; }
+#works .container { margin-bottom: 28px; }
+
+/* Parallax két-soros wrapper */
+.pt-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pt-track {
+    display: flex;
+    gap: 6px;
+    will-change: transform;
+    /* Nincs CSS transition – JS kezeli az easing-et rAF-fal */
+}
+
+.pt-track-large .portfolio-item-large,
+.pt-track-small .portfolio-item-small {
+    flex: 0 0 auto;
+}
+
+.portfolio-showcase {
+    width: 100%;
+    position: relative;
+}
+
+/* A két sor együtt egy scrollozható wrapper-ben */
+.portfolio-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    gap: 0;
+}
+.portfolio-scroller::-webkit-scrollbar { display: none; }
+
+/* Egy "oldal" = a képernyő teljes szélessége, mindkét sorral */
+.portfolio-slide {
+    flex: 0 0 100vw;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 6px;
+    box-sizing: border-box;
+}
+
+.portfolio-slide:first-child { padding-left: 0; }
+.portfolio-slide:last-child { padding-right: 0; }
+
+/* Felső sor: 2 nagy kép egymás mellett */
+.slide-row-large {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+/* Alsó sor: 3-4 kisebb kép egymás mellett */
+.slide-row-small {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+.portfolio-item-large {
+    flex: 0 0 calc(50vw - 3px);
+    width: calc(50vw - 3px);
+    aspect-ratio: 1250 / 668;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    position: relative;
+}
+
+.portfolio-item-small {
+    flex: 0 0 calc(33.333vw - 4px);
+    width: calc(33.333vw - 4px);
+    aspect-ratio: 470 / 264;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    position: relative;
+}
+
+.portfolio-item-large img,
+.portfolio-item-small img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.5s ease;
+}
+.portfolio-item-large:hover img,
+.portfolio-item-small:hover img { transform: scale(1.04); }
+
+/* Dot navigátor */
+.portfolio-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.portfolio-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2);
+    border: none; cursor: pointer; padding: 0;
+    transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.portfolio-dot.active {
+    background: var(--accent);
+    width: 22px;
+    border-radius: 4px;
+    transform: none;
+}
+
+.portfolio-dot:hover:not(.active) { background: rgba(1,53,172,0.4); }
+
+/*CLIENTS*/
+#clients { padding: 70px 0 40px; }
+#clients .container { margin-bottom: 20px; }
+
+.marquee {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+	padding-top: 70px;
+}
+.marquee-track {
+    display: inline-flex; align-items: center;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.client-logo-wrap { display: inline-flex; align-items: center; margin-right: 60px; }
+.client-logo {
+    height: 75px; width: auto; max-width: 270px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.4);
+    opacity: 0.7;
+    transition: filter 0.4s ease, opacity 0.4s ease;
+}
+.client-logo-wrap:hover .client-logo { filter: grayscale(0%); opacity: 1; }
+
+/*ABOUT*/
+#about { padding: 70px 0; }
+.about-content { max-width: 760px; margin: 0 auto; }
+.about-content p { font-size: 1.2rem; color: var(--text-soft); font-weight: 300; line-height: 1.7; margin: 0; }
+
+/*CONTACT*/
+#contact { padding: 70px 0 90px; }
+#contact p { color: var(--text-soft); font-weight: 300; font-size: 1.1rem; margin-bottom: 32px; }
+.contact-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/*FOOTER*/
+footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
+.footer-social { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-bottom: 18px; }
+.footer-social a, .footer-social a:visited {
+    color: var(--text); text-decoration: none;
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+.footer-social a:hover { color: var(--accent); }
+.footer-legal { margin: 0; color: var(--text-soft); font-size: 0.78rem; font-weight: 300; }
+.footer-links a, .footer-links a:visited {
+    color: var(--text-soft); text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-links .sep { margin: 0 6px; }
+
+/*BACK TO TOP*/
+#backToTop {
+    position: fixed; bottom: 30px; right: 30px;
+    background: linear-gradient(30deg, var(--accent), var(--accent-end));
+    border: none; border-radius: 50%;
+    width: 46px; height: 46px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 6px 18px rgba(1,53,172,0.3);
+    opacity: 0; pointer-events: none; transform: translateY(20px);
+}
+#backToTop.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+#backToTop:hover { transform: scale(1.1); }
+
+/*MOBILE*/
+@media (max-width: 768px) {
+    html, body { width: 100% !important; max-width: 100% !important; overflow-x: hidden !important; }
+    .nav-toggle { display: block; position: absolute; right: 25px; top: 50%; transform: translateY(-50%); }
+    .nav-links {
+        position: fixed; top: var(--nav-height); left: 0;
+        width: 100%; flex-direction: column; gap: 0;
+        background: rgba(11,11,11,0.96);
+        -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+        max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+    }
+    .nav-links.open { max-height: 340px; }
+    .nav-links a { width: 100%; padding: 15px 25px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .section-title { font-size: 1.8rem; }
+    .hero-tagline { font-size: 1.5rem; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .feature-tile { aspect-ratio: 4/3; }
+    .ft-overlay { opacity: 1; background: rgba(0,0,0,0.45); }
+    .ft-img { filter: brightness(0.7); }
+    .portfolio-row { flex-direction: column; }
+    .row-large .portfolio-item, .row-small .portfolio-item { height: 240px; flex: none; width: 100%; }
+    .client-logo { height: 57px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    section { transition: none; }
+    .js section { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+}
+
+/* ── ALOLDALAK (szolgáltatások, portfólió) ── */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+.subpage { padding-top: 110px; padding-bottom: 70px; }
+
+.js .reveal { opacity:0; transform:translateX(-60px); transition:opacity .6s ease, transform .6s ease; }
+.js .reveal.from-right { transform:translateX(60px); }
+.js .reveal.visible { opacity:1; transform:none; }
+.js .reveal-up { opacity:0; transform:translateY(40px); transition:opacity .6s ease, transform .6s ease; }
+.js .reveal-up.visible { opacity:1; transform:none; }
+
+.service-block { display:flex; align-items:center; gap:50px; max-width:1000px; margin:0 auto 80px; text-align:left; }
+.service-block.reverse { flex-direction:row-reverse; }
+.service-img { flex:0 0 42%; aspect-ratio:4/3; border-radius:var(--radius); background-color:#e3e3e6; background-size:cover; background-position:center; }
+.service-text { flex:1; }
+.service-text h3 { color:var(--text); font-size:1.6rem; font-weight:500; margin:0 0 14px; }
+.service-text p { color:var(--text-soft); line-height:1.7; margin:0 0 16px; font-size:1rem; font-weight:300; }
+.service-text ul { margin:0; padding-left:20px; list-style:disc; }
+.service-text li { color:var(--text-soft); line-height:1.9; font-size:.95rem; font-weight:300; }
+
+@media (max-width:768px) {
+    .subpage { padding-top:90px; }
+    .service-block, .service-block.reverse { flex-direction:column; gap:22px; margin-bottom:50px; }
+    .service-img { flex:none; width:100%; }
+    .js .reveal, .js .reveal.from-right { transform:translateY(30px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .js .reveal, .js .reveal-up { opacity:1; transform:none; }
+}
+
+/* ── KAPCSOLAT OLDAL ── */
+.contact-page { max-width: 720px; }
+.contact-lead { font-size: 1.5rem; font-weight: 300; color: var(--text); margin: 0 0 10px; }
+.contact-focus { font-size: 1rem; font-weight: 300; color: var(--text-soft); margin: 0 0 38px; }
+.contact-meta { display: flex; flex-direction: column; align-items: center; gap: 22px; margin: 48px 0 36px; }
+.contact-meta-item { display: flex; flex-direction: column; gap: 5px; }
+.cm-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); }
+.cm-value { font-size: 0.98rem; font-weight: 300; color: var(--text-soft); }
+@media (max-width: 768px) {
+    .contact-lead { font-size: 1.2rem; }
+    .contact-meta { gap: 18px; margin: 36px 0 30px; }
+}
+
+/* ── RÓLAM OLDAL ── */
+.rolam-screen { display: flex; flex-direction: column; min-height: 100vh; }
+.rolam-screen .about-hero { flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; padding-top: var(--nav-height); box-sizing: border-box; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: stretch; max-width: 1200px; width: 100%; margin: 0 auto; padding: 20px 30px; box-sizing: border-box; }
+.about-photo { display: flex; align-items: flex-end; justify-content: center; min-height: 0; }
+.about-photo img { max-height: 74vh; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; transform: translateY(30px); }
+.about-text { display: flex; flex-direction: column; justify-content: center; text-align: left; }
+.about-text .hello { font-size: 5rem; font-weight: 700; line-height: 1; margin: 0 0 24px; color: var(--text); letter-spacing: -0.02em; }
+.about-text p { font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: var(--text-soft); margin: 0 0 14px; }
+
+@media (min-width: 769px) {
+    .rolam-screen { height: 100vh; overflow: hidden; }
+    .rolam-screen footer { flex: 0 0 auto; }
+}
+@media (max-width: 768px) {
+    .rolam-screen .about-hero { padding-top: 90px; padding-bottom: 40px; }
+    .about-grid { grid-template-columns: 1fr; gap: 24px; }
+    .about-photo img { max-height: 44vh; }
+    .about-text { text-align: center; }
+    .about-text .hello { font-size: 3.2rem; }
+}
+
+/* ── YOUTUBE OLDAL ── */
+.yt-hero { padding: 130px 0 50px; }
+.yt-kicker { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 14px; }
+.yt-hero h1 { font-size: 2.6rem; font-weight: 700; margin: 0 0 16px; color: var(--text); letter-spacing: -0.02em; }
+.yt-hero p { max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem; font-weight: 300; color: var(--text-soft); line-height: 1.7; }
+
+.btn-youtube { display: inline-flex; align-items: center; gap: 10px; background: #ff0000; color: #fff !important; padding: 14px 30px; border-radius: 980px; font-family: var(--font); font-size: 0.95rem; font-weight: 500; text-decoration: none !important; border: none; cursor: pointer; transition: transform 0.25s ease, box-shadow 0.35s ease, background 0.3s ease; }
+.btn-youtube:hover { transform: scale(1.05); background: #e60000; box-shadow: 0 10px 28px rgba(255, 0, 0, 0.3); }
+.btn-youtube svg { width: 22px; height: 22px; fill: #fff; }
+
+.yt-section { padding: 55px 0; }
+.video-container { position: relative; width: 100%; padding-top: 56.25%; border-radius: 14px; overflow: hidden; background: #000; }
+.video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-featured { max-width: 900px; margin: 0 auto; }
+#video-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+.video-card { width: 100%; }
+
+.yt-pillars-list { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 720px; margin: 0 auto; }
+.yt-pill { padding: 10px 20px; border: 1px solid var(--border); border-radius: 980px; font-size: 0.9rem; color: var(--text); background: var(--surface); }
+
+.yt-channels { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+.yt-channel-card { background: var(--surface); border-radius: 16px; padding: 38px 30px; display: flex; flex-direction: column; align-items: center; gap: 14px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); }
+.yt-channel-card h3 { font-size: 1.4rem; font-weight: 500; margin: 0; color: var(--text); }
+.yt-channel-card p { font-size: 0.95rem; font-weight: 300; color: var(--text-soft); line-height: 1.6; margin: 0; }
+
+.yt-cta { padding: 60px 0 80px; }
+.yt-cta p { max-width: 560px; margin: 0 auto 28px; font-size: 1.1rem; font-weight: 300; color: var(--text-soft); }
+
+/* ── VIDEO THUMBNAIL LINK ── */
+.video-thumb-link { display: block; text-decoration: none; }
+.video-thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease, filter 0.4s ease; }
+.video-play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transition: opacity 0.3s ease; }
+.video-play-btn svg { width: 68px; height: 48px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)); transition: transform 0.3s ease; }
+.video-thumb-link:hover .video-thumb-img { transform: scale(1.03); filter: brightness(0.85); }
+.video-thumb-link:hover .video-play-btn svg { transform: scale(1.12); }
+
+/* Nézettség overlay */
+.video-views {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    font-size: 0.78rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 4px 9px 4px 7px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+}
+.video-views svg {
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+/* Videó cím a kép alatt */
+.video-title {
+    margin: 8px 2px 0;
+    font-size: 0.88rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #777;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.46em;
+}
+
+@media (max-width: 900px) { #video-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px) { #video-list { grid-template-columns: 1fr; } .yt-channels { grid-template-columns: 1fr; } .yt-hero h1 { font-size: 2rem; } }
+
+/* ── PORTFÓLIÓ KATEGÓRIA-LINKEK ── */
+.portfolio-cats { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 14px; margin: 0 auto 40px; }
+.portfolio-cats a { color: var(--text-soft); text-decoration: none; font-size: 0.98rem; font-weight: 400; transition: color 0.3s ease; cursor: pointer; }
+.portfolio-cats a:hover { color: var(--accent); }
+.portfolio-cats a:not(:last-child)::after { content: '/'; margin-left: 14px; color: var(--border); }
+#bento .feature-tile { cursor: default; scroll-margin-top: 70px; }
+
+/* ── SÜTI BANNER ── */
+.cookie-banner {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translate(-50%, 150%);
+    width: calc(100% - 40px);
+    max-width: 460px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: 0 14px 44px rgba(0, 0, 0, 0.18);
+    padding: 22px 24px;
+    z-index: 1200;
+    text-align: left;
+    opacity: 0;
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.45s ease;
+}
+.cookie-banner.show { transform: translate(-50%, 0); opacity: 1; }
+.cookie-text { margin: 0 0 16px; font-size: 0.92rem; font-weight: 300; color: var(--text-soft); line-height: 1.55; }
+.cookie-text a { color: var(--accent); text-decoration: none; }
+.cookie-text a:hover { text-decoration: underline; }
+.cookie-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.cookie-banner button { cursor: pointer; }
+.cookie-banner .cta-button, .cookie-banner .btn-ghost { padding: 10px 22px; font-size: 0.88rem; }
+@media (max-width: 480px) {
+    .cookie-banner { bottom: 12px; padding: 18px; }
+    .cookie-actions { width: 100%; }
+    .cookie-banner .cta-button, .cookie-banner .btn-ghost { flex: 1; text-align: center; }
+}
+
+/* ── YOUTUBE: nézettség számláló (piros szám, nincs piros sáv) ── */
+#stats-bar { padding: 60px 0; }
+#stats-bar .section-sub { margin-bottom: 44px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+.stat-item { display: flex; flex-direction: column; align-items: center; }
+.stat-number { font-size: 3rem; font-weight: 700; color: #ff0000; line-height: 1; letter-spacing: -0.02em; }
+.stat-label { font-size: 0.9rem; color: var(--text-soft); margin-top: 10px; font-weight: 300; }
+@media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; } .stat-number { font-size: 2.4rem; } }
+
+/* ── YOUTUBE: együttműködés CTA ── */
+.yt-partner p { max-width: 600px; margin: 0 auto 28px; font-size: 1.1rem; font-weight: 300; color: var(--text-soft); line-height: 1.7; }
