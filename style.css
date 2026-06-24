@@ -143,8 +143,8 @@ section { padding: 0; transition: var(--transition); }
     z-index: 1;
     pointer-events: none;
     background:
-    radial-gradient(60% 70% at 20% 24%, rgba(1, 53, 172, 0.05), transparent 60%),
-	radial-gradient(65% 75% at 82% 78%, rgba(1, 53, 172, 0.06), transparent 60%);
+        radial-gradient(60% 70% at 20% 24%, rgba(1, 53, 172, 0.05), transparent 60%),
+		radial-gradient(65% 75% at 82% 78%, rgba(1, 53, 172, 0.05), transparent 60%);
 }
 .hero-content { position: relative; z-index: 2; padding: 0 20px; }
 .hero-logo { max-width: 500px; width: 80%; margin-bottom: 28px; }
@@ -356,6 +356,37 @@ section { padding: 0; transition: var(--transition); }
 }
 
 .portfolio-dot:hover:not(.active) { background: rgba(1,53,172,0.4); }
+
+/* ── MUNKÁIM: mobil egy-képes négyzetes carousel ── */
+.pt-mobile { display: none; }
+
+@media (max-width: 760px) {
+    .portfolio-showcase .pt-wrapper { display: none; }
+    .portfolio-showcase .portfolio-dots { display: none; }
+    .pt-mobile {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0 7.5vw;
+        box-sizing: border-box;
+    }
+    .pt-mobile::-webkit-scrollbar { display: none; }
+    .pt-m-slide {
+        flex: 0 0 85vw;
+        aspect-ratio: 1 / 1;
+        scroll-snap-align: center;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #1a1a1a;
+    }
+    .pt-m-slide img {
+        width: 100%; height: 100%;
+        object-fit: cover; display: block;
+    }
+}
 
 /*CLIENTS*/
 #clients { padding: 70px 0 40px; }

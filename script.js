@@ -90,6 +90,19 @@ function loadPortfolio() {
     wrapper.appendChild(smallTrack);
     showcase.insertBefore(wrapper, scrollerEl);
 
+    // Mobil: egy-képes négyzetes (1:1) carousel, natív ujjas húzással
+    const mobile = document.createElement('div');
+    mobile.className = 'pt-mobile';
+    PORTFOLIO_SLIDES.forEach(slide => {
+        [...slide.large, ...slide.small].forEach(item => {
+            const s = document.createElement('div');
+            s.className = 'pt-m-slide';
+            s.innerHTML = `<img src="assets/portfolio/${item.file}" alt="${item.title || ''}" onerror="this.parentElement.style.background='#2a2a2a'">`;
+            mobile.appendChild(s);
+        });
+    });
+    showcase.appendChild(mobile);
+
     // ── Animáció állapot ──
     const totalSlides = PORTFOLIO_SLIDES.length;
     let currentSlide  = 0;
