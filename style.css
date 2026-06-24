@@ -465,7 +465,7 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 .js .reveal-up { opacity:0; transform:translateY(40px); transition:opacity .6s ease, transform .6s ease; }
 .js .reveal-up.visible { opacity:1; transform:none; }
 
-.service-block { display:flex; align-items:center; gap:50px; max-width:1000px; margin:0 auto 80px; text-align:left; }
+.service-block { display:flex; align-items:center; gap:50px; max-width:1000px; margin:0 auto 80px; text-align:left; scroll-margin-top:70px; }
 .service-block.reverse { flex-direction:row-reverse; }
 .service-img { flex:0 0 42%; aspect-ratio:4/3; border-radius:var(--radius); background-color:#e3e3e6; background-size:cover; background-position:center; }
 .service-text { flex:1; }

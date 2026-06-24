@@ -252,6 +252,19 @@ function loadBento() {
     });
 }
 
+/* ── SZOLGÁLTATÁSOK KATEGÓRIA-SÁV ── */
+function setupServiceCats() {
+    const cats = document.getElementById('service-cats');
+    if (!cats) return;
+    cats.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.getElementById(link.getAttribute('href').slice(1));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+}
+
 /* ── SZÁMLÁLÓ ── */
 const runCounters = () => {
     document.querySelectorAll('.stat-number').forEach(counter => {
@@ -365,6 +378,7 @@ window.addEventListener('DOMContentLoaded', () => {
     loadClientLogos();
     loadPortfolio();
     loadBento();
+    setupServiceCats();
     setupNavbar();
     setupContactActions();
     setupHeroCta();
