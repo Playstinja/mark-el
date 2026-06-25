@@ -506,6 +506,19 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 
 .subpage { padding-top: 110px; padding-bottom: 70px; }
 
+/* ── Jogi szöveg (adatkezelési tájékoztató) ── */
+.legal-page { max-width: 820px; margin: 0 auto; padding-left: 25px; padding-right: 25px; }
+.legal-page .section-title { text-align: left; }
+.legal-meta { color: var(--text-soft); opacity: 0.6; font-size: 0.9rem; margin: -6px 0 30px; }
+.legal-page h2 { font-size: 1.35rem; margin: 36px 0 12px; }
+.legal-page h3 { font-size: 1.08rem; font-weight: 500; letter-spacing: 0; margin: 22px 0 8px; }
+.legal-page p { font-size: 1rem; line-height: 1.7; color: var(--text-soft); margin: 0 0 14px; }
+.legal-page ul { margin: 0 0 16px; padding-left: 22px; }
+.legal-page li { font-size: 1rem; line-height: 1.7; color: var(--text-soft); margin-bottom: 6px; }
+.legal-page a { color: var(--accent); text-decoration: none; }
+.legal-page a:hover { text-decoration: underline; }
+.legal-page strong { font-weight: 500; }
+
 .js .reveal { opacity:0; transform:translateX(-60px); transition:opacity .6s ease, transform .6s ease; }
 .js .reveal.from-right { transform:translateX(60px); }
 .js .reveal.visible { opacity:1; transform:none; }
