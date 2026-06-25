@@ -484,6 +484,11 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
     .feature-tile { aspect-ratio: 4/3; }
     .ft-overlay { opacity: 1; background: rgba(0,0,0,0.45); }
     .ft-img { filter: brightness(0.7); }
+    /* Portfólió csempék mobilon: alapból éles kép, koppintásra jön a felirat */
+    #bento .ft-overlay { opacity: 0; }
+    #bento .ft-img { filter: none; }
+    #bento .feature-tile.revealed .ft-overlay { opacity: 1; }
+    #bento .feature-tile.revealed .ft-img { filter: blur(4px) brightness(0.55); }
     .portfolio-row { flex-direction: column; }
     .row-large .portfolio-item, .row-small .portfolio-item { height: 240px; flex: none; width: 100%; }
     .client-logo { height: 57px; }

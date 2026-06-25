@@ -183,7 +183,7 @@ function loadPortfolio() {
             const dot = document.createElement('button');
             dot.className = 'portfolio-dot' + (i === 0 ? ' active' : '');
             dot.setAttribute('aria-label', `${i + 1}. oldal`);
-            dot.addEventListener('click', () => goTo(i));
+            dot.addEventListener('click', () => { goTo(i); startAuto(); });
             dotsEl.appendChild(dot);
         });
     }
@@ -197,6 +197,7 @@ function loadPortfolio() {
         if (Math.abs(dx) > 40) goTo(currentSlide + (dx > 0 ? 1 : -1));
         dragStartX = null;
         dragStartY = null;
+        startAuto();
     }
     wrapper.addEventListener('pointerdown', e => {
         dragStartX = e.clientX;
@@ -204,6 +205,15 @@ function loadPortfolio() {
     });
     wrapper.addEventListener('pointerup', e => endDrag(e.clientX));
     wrapper.addEventListener('pointercancel', () => { dragStartX = null; dragStartY = null; });
+
+    // Automatikus lapozás 15 mp-enként, körbeforgással; egérrel fölé érve megáll
+    let autoTimer = null;
+    function nextSlide() { goTo((currentSlide + 1) % totalSlides); }
+    function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+    function startAuto() { stopAuto(); if (totalSlides > 1) autoTimer = setInterval(nextSlide, 15000); }
+    showcase.addEventListener('mouseenter', stopAuto);
+    showcase.addEventListener('mouseleave', startAuto);
+    startAuto();
 
     applyPositions(0, 0);
 }
@@ -260,6 +270,9 @@ function loadBento() {
             tile.className = 'feature-tile reveal-up';
             if (idx === 0) tile.id = 'kat-' + cat.id;
             tile.innerHTML = `<div class="ft-img" style="background-image:url('assets/portfolio/${item.file}')"></div><div class="ft-overlay"><h3>${item.title || ''}</h3><p class="ft-sub">${item.desc || ''}</p></div>`;
+            if (window.matchMedia('(hover: none)').matches) {
+                tile.addEventListener('click', () => tile.classList.toggle('revealed'));
+            }
             grid.appendChild(tile);
         });
     });
