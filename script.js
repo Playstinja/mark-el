@@ -398,6 +398,19 @@ const setupCookieBanner = () => {
 };
 
 /* ── INIT ── */
+function setupFaq() {
+    const items = document.querySelectorAll('.faq-item');
+    if (!items.length) return;
+    items.forEach(item => {
+        const q = item.querySelector('.faq-q');
+        if (!q) return;
+        q.addEventListener('click', () => {
+            const isOpen = item.classList.toggle('open');
+            q.setAttribute('aria-expanded', String(isOpen));
+        });
+    });
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     loadClientLogos();
     loadPortfolio();
@@ -407,6 +420,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setupContactActions();
     setupHeroCta();
     setupCookieBanner();
+    setupFaq();
 
     const sectionObs = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
