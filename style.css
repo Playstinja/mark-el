@@ -63,7 +63,7 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; letter-spacing:
 .nav-container {
     max-width: 1100px; height: 100%;
     margin: 0 auto; padding: 0 25px;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: center; justify-content: flex-start;
     position: relative;
 }
 .nav-links { display: flex; gap: 30px; align-items: center; }
@@ -75,6 +75,21 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; letter-spacing:
     transition: color 0.3s ease;
 }
 .nav-links a:hover, .nav-links a.active { color: #ffffff; }
+.nav-logo { display: flex; align-items: center; margin-right: 50px; flex-shrink: 0; }
+.nav-logo img { height: 26px; width: auto; display: block; filter: brightness(0) invert(1); }
+@media (max-width: 900px) {
+    .nav-logo { position: absolute; left: 25px; top: 50%; transform: translateY(-50%); margin-right: 0; }
+    .navbar .nav-toggle { display: block; position: absolute; right: 25px; top: 50%; transform: translateY(-50%); }
+    .nav-links {
+        position: fixed; top: var(--nav-height); left: 0;
+        width: 100%; flex-direction: column; gap: 0;
+        background: rgba(11,11,11,0.96);
+        -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+        max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+    }
+    .nav-links.open { max-height: 400px; }
+    .nav-links a { width: 100%; padding: 15px 25px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+}
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; width: 28px; height: 20px; position: relative; padding: 0; }
 .nav-toggle span { display: block; position: absolute; left: 0; width: 100%; height: 1.5px; background: #d8d8db; transition: all 0.3s ease; }
@@ -129,8 +144,8 @@ section { padding: 0; transition: var(--transition); }
 
 /* ── HERO ── */
 .hero {
-    min-height: 92vh;
-    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+    display: flex; align-items: stretch; justify-content: center;
     position: relative;
     overflow: hidden;
     padding-top: var(--nav-height);
@@ -143,25 +158,16 @@ section { padding: 0; transition: var(--transition); }
     z-index: 1;
     pointer-events: none;
     background:
-        radial-gradient(60% 70% at 20% 24%, rgba(1, 53, 172, 0.05), transparent 60%),
-        radial-gradient(65% 75% at 82% 78%, rgba(1, 53, 172, 0.05), transparent 60%);
+        radial-gradient(60% 70% at 20% 24%, rgba(1, 53, 172, 0.08), transparent 60%),
+        radial-gradient(65% 75% at 82% 78%, rgba(1, 53, 172, 0.08), transparent 60%);
 }
-.hero-content { position: relative; z-index: 2; padding: 0 20px; }
-.hero-logo { max-width: 500px; width: 80%; margin-bottom: 28px; }
-.hero-tagline {
-    font-size: 2rem; font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin: 0 0 12px;
-    text-transform: uppercase;
-}
-.hero-sub {
-    font-size: 1.1rem; font-weight: 300;
-    color: var(--text-soft);
-    margin: 0 auto 36px;
-    max-width: 520px;
-    font-style: italic;
-}
+.hero-inner { position: relative; z-index: 2; display: flex; align-items: stretch; gap: 50px; max-width: 1100px; width: 100%; margin: 0 auto; padding: 0 25px; box-sizing: border-box; }
+.hero-photo { flex: 0 0 54%; display: flex; align-items: flex-end; justify-content: center; }
+.hero-photo img { max-width: 100%; max-height: 94vh; width: auto; height: auto; object-fit: contain; display: block; }
+.hero-content { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; text-align: left; }
+.hero-content .cta-button { align-self: flex-start; }
+.hero-title { font-family: var(--font-heading); font-size: 2.6rem; font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin: 0 0 16px; }
+.hero-lead { font-size: 1.15rem; font-weight: 300; line-height: 1.6; color: var(--text-soft); margin: 0 0 28px; max-width: 540px; }
 
 /* ── FEATURES (SZOLGÁLTATÁSAIM) ── */
 #features { padding: 70px 0 0; }
@@ -468,18 +474,14 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 /*MOBILE*/
 @media (max-width: 768px) {
     html, body { width: 100% !important; max-width: 100% !important; overflow-x: hidden !important; }
-    .nav-toggle { display: block; position: absolute; right: 25px; top: 50%; transform: translateY(-50%); }
-    .nav-links {
-        position: fixed; top: var(--nav-height); left: 0;
-        width: 100%; flex-direction: column; gap: 0;
-        background: rgba(11,11,11,0.96);
-        -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
-        max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
-    }
-    .nav-links.open { max-height: 340px; }
-    .nav-links a { width: 100%; padding: 15px 25px; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .section-title { font-size: 1.8rem; }
-    .hero-tagline { font-size: 1.5rem; }
+    .hero { min-height: auto; padding-bottom: 40px; }
+    .hero-inner { flex-direction: column; text-align: center; gap: 16px; align-items: center; }
+    .hero-photo { flex: none; }
+    .hero-photo img { max-height: 52vh; }
+    .hero-content { flex: 0 0 auto; justify-content: flex-start; text-align: center; }
+    .hero-title { font-size: 1.9rem; }
+    .hero-lead { margin-left: auto; margin-right: auto; }
     .feature-grid { grid-template-columns: 1fr; }
     .feature-tile { aspect-ratio: 4/3; }
     .ft-overlay { opacity: 1; background: rgba(0,0,0,0.45); }
@@ -513,7 +515,9 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 .legal-page h2 { font-size: 1.35rem; margin: 36px 0 12px; }
 .legal-page h3 { font-size: 1.08rem; font-weight: 500; letter-spacing: 0; margin: 22px 0 8px; }
 .legal-page p { font-size: 1rem; line-height: 1.7; color: var(--text-soft); margin: 0 0 14px; }
-.legal-page ul { margin: 0 0 16px; padding-left: 22px; }
+.legal-page ul { list-style: none; margin: 0 0 16px; padding-left: 0; }
+.email-protected a { color: var(--accent); text-decoration: none; }
+.email-protected a:hover { text-decoration: underline; }
 .legal-page li { font-size: 1rem; line-height: 1.7; color: var(--text-soft); margin-bottom: 6px; }
 .legal-page a { color: var(--accent); text-decoration: none; }
 .legal-page a:hover { text-decoration: underline; }
@@ -568,7 +572,7 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 .sticky-page { display: flex; flex-direction: column; min-height: 100vh; }
 .sticky-page > main { flex: 1 0 auto; }
 .sticky-page > footer { flex-shrink: 0; }
-.sticky-page .contact-page { display: flex; flex-direction: column; justify-content: center; }
+.sticky-page .contact-page, .sticky-page .legal-page { display: flex; flex-direction: column; justify-content: center; }
 .contact-lead { font-size: 1.5rem; font-weight: 300; color: var(--text); margin: 0 0 10px; }
 .contact-focus { font-size: 1rem; font-weight: 300; color: var(--text-soft); margin: 0 0 38px; }
 .contact-meta { display: flex; flex-direction: column; align-items: center; gap: 22px; margin: 48px 0 36px; }
@@ -589,7 +593,7 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
 .about-hero { display: flex; align-items: stretch; padding: 20px 0 0; box-sizing: border-box; }
 .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: stretch; max-width: 1300px; width: 100%; margin: 0 auto; padding: 0 30px; box-sizing: border-box; }
 .about-photo { display: flex; align-items: flex-end; justify-content: center; }
-.about-photo img { max-height: 120vh; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+.about-photo img { max-height: 78vh; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
 .about-text { display: flex; flex-direction: column; justify-content: center; text-align: left; }
 .about-text .hello { font-size: 3.4rem; font-weight: 700; line-height: 1.06; margin: 0 0 24px; color: var(--text); letter-spacing: -0.02em; }
 .about-text p { font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: var(--text-soft); margin: 0 0 14px; }

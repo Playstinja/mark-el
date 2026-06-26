@@ -411,6 +411,18 @@ function setupFaq() {
     });
 }
 
+function setupProtectedEmail() {
+    const els = document.querySelectorAll('.email-protected');
+    if (!els.length) return;
+    const email = ['markle', 'hoczki', '@', 'gma', 'il.com'].join('');
+    els.forEach(el => {
+        const a = document.createElement('a');
+        a.href = 'mailto:' + email;
+        a.textContent = email;
+        el.appendChild(a);
+    });
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     loadClientLogos();
     loadPortfolio();
@@ -421,6 +433,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setupHeroCta();
     setupCookieBanner();
     setupFaq();
+    setupProtectedEmail();
 
     const sectionObs = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

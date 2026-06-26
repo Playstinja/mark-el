@@ -22,10 +22,11 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-home">
 
     <header class="navbar" id="navbar">
         <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Mark-EL főoldal"><img src="assets/mark-el-logo-black.svg" alt="Mark-EL"></a>
             <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
                 <span></span><span></span><span></span>
             </button>
@@ -43,11 +44,16 @@
 
     <!-- HERO -->
     <section id="home" class="hero visible">
-        <div class="hero-content">
-            <h1><img src="assets/mark-el-logo-black.svg" alt="Mark-EL" class="hero-logo"></h1>
-            <p class="hero-tagline">Tervezéstől a kivitelezésig</p>
-            <p class="hero-sub"><em>Nem csak megtervezem. Végigviszem a folyamatot.</em></p>
-            <a href="#features" class="cta-button" id="hero-cta">Szolgáltatásaim</a>
+        <div class="hero-inner">
+            <div class="hero-photo">
+                <img src="assets/mark-el-profile.webp" alt="Lehoczki Márk grafikus és tartalomkészítő">
+            </div>
+            <div class="hero-content">
+                <span class="yt-kicker">Lehoczki Márk vagyok</span>
+                <h1 class="hero-title">Az ötlettől a kész, működő végeredményig.</h1>
+                <p class="hero-lead">Grafika, tartalom, folyamat és web egy kézből.<br>2009 óta tervezek, építek és optimalizálok.</p>
+                <a href="#features" class="cta-button" id="hero-cta">Szolgáltatásaim</a>
+            </div>
         </div>
     </section>
 
