@@ -331,7 +331,7 @@ const setupContactActions = () => {
     if (emailLink) {
         emailLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const parts = ['markle', 'hoczki', '@', 'gma', 'il.com'];
+            const parts = ['hello', '@', 'mark-el', '.hu'];
             const email = parts.join('');
             window.location.href = 'mailto:' + email;
             navigator.clipboard?.writeText(email).then(() => {
@@ -414,7 +414,7 @@ function setupFaq() {
 function setupProtectedEmail() {
     const els = document.querySelectorAll('.email-protected');
     if (!els.length) return;
-    const email = ['markle', 'hoczki', '@', 'gma', 'il.com'].join('');
+    const email = ['hello', '@', 'mark-el', '.hu'].join('');
     els.forEach(el => {
         const a = document.createElement('a');
         a.href = 'mailto:' + email;
