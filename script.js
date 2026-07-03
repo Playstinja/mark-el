@@ -380,14 +380,14 @@ const setupHeroCta = () => {
 
 /* ── SÜTI BANNER ── */
 const setupCookieBanner = () => {
-    // Teszteléshez minden betöltéskor megjelenik. Élesben ide jöhet: if (localStorage.getItem('cookie-consent')) return;
+    if (localStorage.getItem('cookie-consent')) return;
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
     banner.innerHTML = `<p class="cookie-text">Ez a weboldal sütiket használ a megfelelő működéshez és a látogatottság elemzéséhez. Részletek az <a href="adatkezeles.html">Adatkezelési tájékoztatóban</a>.</p><div class="cookie-actions"><button type="button" class="cta-button" id="cookie-accept">Elfogadom</button><button type="button" class="btn-ghost" id="cookie-reject">Elutasítom</button></div>`;
     document.body.appendChild(banner);
     requestAnimationFrame(() => banner.classList.add('show'));
     const close = (choice) => {
-        // Élesben: localStorage.setItem('cookie-consent', choice);
+        localStorage.setItem('cookie-consent', choice);
         banner.classList.remove('show');
         setTimeout(() => banner.remove(), 450);
     };
