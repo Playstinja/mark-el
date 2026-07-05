@@ -478,12 +478,13 @@ footer { padding: 40px 25px 50px; border-top: 1px solid var(--border); }
     .hero { min-height: auto; padding-bottom: 40px; }
     .hero-inner { flex-direction: column; text-align: center; gap: 16px; align-items: center; }
     .hero-photo { flex: none; }
-    .hero-photo img { max-height: 52vh; }
+    .hero-photo img { max-height: 38vh; }
     .hero-content { flex: 0 0 auto; justify-content: flex-start; text-align: center; }
+    .hero-content .cta-button { align-self: center; }
     .hero-title { font-size: 1.9rem; }
     .hero-lead { margin-left: auto; margin-right: auto; }
-    .feature-grid { grid-template-columns: repeat(2, 1fr); }
-    .feature-tile { aspect-ratio: 4/3; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .feature-tile { aspect-ratio: 16/9; }
     .ft-overlay { opacity: 1; background: rgba(0,0,0,0.45); }
     .ft-img { filter: brightness(0.7); }
     /* Portfólió csempék mobilon: alapból éles kép, koppintásra jön a felirat */
