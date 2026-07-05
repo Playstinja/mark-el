@@ -33,8 +33,13 @@
         </div>
     </header>
 
-    <main class="subpage container">
-        <h2 class="section-title">Szolgáltatásaim</h2>
+    <main class="subpage container svc-hub">
+
+        <div class="svc-intro">
+            <h2 class="section-title">Szolgáltatásaim</h2>
+            <p class="svc-subtitle">Design, tartalom, web és kivitelezés egy rendszerben.</p>
+            <p class="ap-lead">Négy terület, amelyek külön is működnek, de együtt adják meg a teljes vizuális jelenlétet. Az első ötlettől a kész, működő végeredményig minden elem ugyanabba az irányba dolgozik.</p>
+        </div>
 
         <div class="portfolio-cats" id="service-cats">
             <a href="#szolg-tartalom">Tartalomgyártás</a>
@@ -43,69 +48,92 @@
             <a href="#szolg-pm">Koncepció & Kivitelezés</a>
         </div>
 
-        <div class="service-block reveal" id="szolg-tartalom">
-            <div class="service-img" style="background-image:url('assets/work/tartalomgyartas.webp')"></div>
-            <div class="service-text">
-                <h3>Tartalomgyártás</h3>
-                <p>Online tartalmak, amelyek első pillantásra érthetők, vizuálisan erősek és illeszkednek az adott platformhoz. A cél nem csak a jelenlét, hanem a figyelem megszerzése és megtartása.</p>
-                <ul>
-                    <li>YouTube thumbnailök</li>
-                    <li>Social media kreatívok</li>
-                    <li>Videós tartalmak</li>
-                    <li>Kampányvizuálok</li>
-                    <li>Képi és videós utómunka</li>
-                </ul>
-                <a href="#" class="btn-ghost" style="display:inline-block;margin-top:18px;">Részletek</a>
+        <div class="ap-wall">
+
+            <!-- Tartalomgyártás -->
+            <div class="ap-block ap-block--tall ap-block--dark reveal" id="szolg-tartalom">
+                <div class="ap-block-text">
+                    <span class="ap-block-label">Tartalomgyártás</span>
+                    <h2>Figyelmet nem kérünk. Tervezünk.</h2>
+                    <p>YouTube thumbnailök, social kreatívok és kampányvizuálok, amelyek nem külön képként működnek, hanem egy átgondolt online jelenlét részeként.</p>
+                    <div class="ap-block-tags">
+                        <span>YouTube thumbnailök</span>
+                        <span>Social media kreatívok</span>
+                        <span>Videós tartalmak</span>
+                        <span>Kampányvizuálok</span>
+                        <span>Képi és videós utómunka</span>
+                    </div>
+                    <a href="tartalomgyartas.html" class="cta-button">Részletek</a>
+                </div>
+                <div class="ap-block-img">képplaceholder</div>
+            </div>
+
+            <!-- Brand & Visual Design -->
+            <div class="ap-block ap-block--tall ap-block--light reveal from-right" id="szolg-grafikai">
+                <div class="ap-block-text">
+                    <span class="ap-block-label">Brand & Visual Design</span>
+                    <h2>A márkád nem attól erős, hogy szép. Hanem attól, hogy felismerhető.</h2>
+                    <p>Arculati, online és nyomtatott vizuális anyagok, amelyek nem különálló grafikákként jelennek meg, hanem következetes márkamegjelenést építenek.</p>
+                    <div class="ap-block-tags">
+                        <span>Arculati anyagok</span>
+                        <span>Kiadványok</span>
+                        <span>Online és offline kreatívok</span>
+                        <span>Kampányvizuálok</span>
+                        <span>Nyomdai előkészítés</span>
+                    </div>
+                    <a href="brand-visual-design.html" class="cta-button">Részletek</a>
+                </div>
+                <div class="ap-block-img">képplaceholder</div>
+            </div>
+
+            <!-- Webdesign & UI/UX -->
+            <div class="ap-block ap-block--tall ap-block--mid reveal" id="szolg-web">
+                <div class="ap-block-text">
+                    <span class="ap-block-label">Webdesign & UI/UX</span>
+                    <h2>A social platform figyelmet hoz. A weboldal bizalmat épít és konvertál.</h2>
+                    <p>Átgondolt weboldalak, ahol a látvány, a felhasználói élmény és a működés egy rendszert alkot. Nem csak online jelenlét készül, hanem saját felület, amely érthetőbbé és hitelesebbé teszi a márkát.</p>
+                    <div class="ap-block-tags">
+                        <span>Weboldaltervezés és fejlesztés</span>
+                        <span>UI/UX tervezés</span>
+                        <span>WordPress fejlesztés</span>
+                        <span>Reszponzív kialakítás</span>
+                        <span>Landing oldalak</span>
+                    </div>
+                    <a href="webdesign-uiux.html" class="cta-button">Részletek</a>
+                </div>
+                <div class="ap-block-img">képplaceholder</div>
+            </div>
+
+            <!-- Koncepció & Kivitelezés -->
+            <div class="ap-block ap-block--tall ap-block--accent reveal from-right" id="szolg-pm">
+                <div class="ap-block-text">
+                    <span class="ap-block-label">Koncepció & Kivitelezés</span>
+                    <h2>Az ötlet önmagában kevés. Rendszer kell hozzá, hogy működjön.</h2>
+                    <p>Átgondolt folyamatok, gyártásra kész anyagok és pontosabb kivitelezés az első ötlettől a kész végeredményig. A cél a kevesebb felesleges kör, kevesebb hibalehetőség és tisztább folyamat.</p>
+                    <div class="ap-block-tags">
+                        <span>Folyamatok átgondolása</span>
+                        <span>Gyártási előkészítés</span>
+                        <span>Változó adattartalmú anyagok</span>
+                        <span>Egyedi sablonrendszerek</span>
+                        <span>Projektkoordináció</span>
+                    </div>
+                    <a href="koncepcio-kivitelezes.html" class="cta-button">Részletek</a>
+                </div>
+                <div class="ap-block-img">képplaceholder</div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="ap-cta">
+            <h2>Nem tudod, pontosan melyik szolgáltatás illik a projektedhez?</h2>
+            <p>Írd meg, hol tartasz most, és segítek rendszerbe rakni, mire van szükség: vizuális megjelenésre, tartalomra, weboldalra, kivitelezésre vagy ezek kombinációjára.</p>
+            <div class="contact-actions">
+                <a href="#" id="contact-mail" class="cta-button">Írj nekem</a>
+                <a href="#" id="contact-phone" class="btn-ghost">Hívj fel</a>
             </div>
         </div>
 
-        <div class="service-block reverse reveal from-right" id="szolg-grafikai">
-            <div class="service-img" style="background-image:url('assets/work/grafikai-tervezes.webp')"></div>
-            <div class="service-text">
-                <h3>Brand & Visual Design</h3>
-                <p>Vizuális rendszereket tervezek, amelyek egységesen működnek weben, közösségi felületeken és nyomtatásban is. Arculattól kampányanyagokig minden elemnek ugyanazt a minőséget és irányt kell képviselnie.</p>
-                <ul>
-                    <li>Arculati anyagok</li>
-                    <li>Kiadványok</li>
-                    <li>Online és offline kreatívok</li>
-                    <li>Kampányvizuálok</li>
-                    <li>Nyomdai előkészítés</li>
-                </ul>
-                <a href="#" class="btn-ghost" style="display:inline-block;margin-top:18px;">Részletek</a>
-            </div>
-        </div>
-
-        <div class="service-block reveal" id="szolg-web">
-            <div class="service-img" style="background-image:url('assets/work/rendszerepites.webp')"></div>
-            <div class="service-text">
-                <h3>Webdesign & UI/UX</h3>
-                <p>Weboldalakat készítek, ahol a látvány nem díszítés, hanem a működés része.<br>Átgondolt struktúra, tiszta felhasználói útvonalak és kész, éles megvalósítás egy kézből.</p>
-                <ul>
-                    <li>Weboldaltervezés és fejlesztés</li>
-                    <li>UI/UX tervezés</li>
-                    <li>WordPress fejlesztés</li>
-                    <li>Reszponzív, mobilbarát kialakítás</li>
-                    <li>Landing oldalak</li>
-                </ul>
-                <a href="#" class="btn-ghost" style="display:inline-block;margin-top:18px;">Részletek</a>
-            </div>
-        </div>
-
-        <div class="service-block reverse reveal from-right" id="szolg-pm">
-            <div class="service-img" style="background-image:url('assets/work/rendszerepites.webp')"></div>
-            <div class="service-text">
-                <h3>Koncepció & Kivitelezés</h3>
-                <p>Átgondolt munkafolyamatokat építek, hogy az ötletből ne csak látványos terv, hanem pontosan kivitelezhető végeredmény legyen. A cél a tisztább folyamat, kevesebb hibalehetőség és gyorsabb, kiszámíthatóbb gyártás.</p>
-                <ul>
-                    <li>Munkafolyamatok kialakítása</li>
-                    <li>Gyártási előkészítés</li>
-                    <li>Sablonrendszerek</li>
-                    <li>Változó adattartalmú anyagok</li>
-                    <li>Projektkövetés és koordináció</li>
-                </ul>
-                <a href="#" class="btn-ghost" style="display:inline-block;margin-top:18px;">Részletek</a>
-            </div>
-        </div>
     </main>
 
     <footer>
