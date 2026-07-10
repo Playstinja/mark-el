@@ -4,158 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>document.documentElement.classList.add('js');</script>
-    <title>Mark-EL | Az ötlettől a kész, működő végeredményig</title>
-    <meta name="description" content="Lehoczki Márk grafikus, tartalomkészítő és folyamatoptimalizáló. 2009 óta tervezek, építek és optimalizálok. Grafika, tartalom, web és koordináció egy kézből.">
-    <meta property="og:title" content="Mark-EL | Az ötlettől a kész, működő végeredményig">
-    <meta property="og:type" content="website">
-
-    <!-- Google Analytics placeholder -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
-
-    <!-- Meta Pixel placeholder -->
-    <!-- <script>!function(f,b,e,v,n,t,s){...}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');</script> -->
+    <title>Mark-EL | Az oldal hamarosan új köntösben</title>
+    <meta name="description" content="A mark-el.hu hamarosan új köntösben. Addig is keress bizalommal: tartalomgyártás, brand & visual design, webdesign és kivitelezés egy rendszerben, 2009 óta.">
+    <meta name="robots" content="noindex">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <!-- Roboto előtöltés a FOUT elkerüléséhez -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-home">
+<body class="coming-soon">
 
-    <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="Mark-EL főoldal"><img src="assets/mark-el-logo-black.svg" alt="Mark-EL"></a>
-            <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása">
-                <span></span><span></span><span></span>
-            </button>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html" class="active">Főoldal</a>
-                <a href="szolgaltatasok.html">Szolgáltatások</a>
-                <a href="portfolio.html">Portfólió</a>
-                <a href="youtube.html">YouTube</a>
-                <a href="rolam.html">Rólam</a>
-                <a href="gyik.html">GY.I.K.</a>
-                <a href="kapcsolat.html">Kapcsolat</a>
-            </nav>
+    <main class="ap-detail cs-main">
+
+        <!-- HERO (középre) -->
+        <div class="ap-hero">
+            <span class="yt-kicker">Az oldal hamarosan új köntösben</span>
+            <h1>Design, tartalom, web és kivitelezés egy rendszerben.</h1>
+            <p class="ap-lead">Vizuális megjelenés, tartalom, web és kivitelezés egy kézből. <br />2009 óta segítek ötletekből átgondolt, működő végeredményt építeni.</p>
         </div>
-    </header>
 
-    <!-- HERO -->
-    <section id="home" class="hero visible">
-        <div class="hero-inner">
-            <div class="hero-photo">
-                <img src="assets/mark-el-profile.webp" alt="Lehoczki Márk grafikus és tartalomkészítő">
+        <!-- SÖTÉT NEON SÁV (balra zárt szöveg, mint a thumbnail-blokk) -->
+        <div class="ap-wall">
+            <div class="ap-block ap-block--wide ap-block--dark" id="cs-band">
+                <div class="ap-block-text">
+                    <span class="ap-block-label">Lehoczki Márk vagyok</span>
+                    <h2>Keress bizalommal.</h2>
+                    <div class="contact-actions cs-band-actions">
+                        <a href="#" id="contact-mail" class="cta-button">Írj nekem</a>
+                        <a href="#" id="contact-phone" class="btn-ghost">Hívj fel</a>
+                    </div>
+                    <ul class="cs-services">
+                        <li>Tartalomgyártás</li>
+                        <li>Brand &amp; Visual Design</li>
+                        <li>Webdesign &amp; UI/UX</li>
+                        <li>Koncepció &amp; Kivitelezés</li>
+                    </ul>
+                </div>
+                <div class="ap-block-img">
+                    <img src="assets/work/tartalomgyartas/thumbnail.webp" alt="">
+                </div>
             </div>
-            <div class="hero-content">
-                <span class="yt-kicker">Lehoczki Márk vagyok</span>
-                <h1 class="hero-title">Az ötlettől a kész, működő végeredményig.</h1>
-                <p class="hero-lead">Vizuális megjelenés, tartalom, web és kivitelezés egy kézből.<br>2009 óta segítek ötletekből átgondolt, működő végeredményt építeni.</p>
-                <a href="#features" class="cta-button" id="hero-cta">Szolgáltatásaim</a>
-            </div>
         </div>
-    </section>
 
-    <!-- SZOLGÁLTATÁSAIM -->
-    <section id="features">
-        <div class="container features-header">
-            <h2 class="section-title">Szolgáltatásaim</h2>
-        </div>
-        <div class="feature-grid">
-            <a href="tartalomgyartas.html" class="feature-tile">
-                <div class="ft-img" style="background-image:url('assets/work/tartalomgyartas.webp')"></div>
-                <div class="ft-overlay">
-                    <h3>Tartalomgyártás</h3>
-                    <p class="ft-sub">Tartalmak, amelyek figyelmet szereznek és megtartják a nézőt.</p>
-                </div>
-            </a>
-            <a href="brand-visual-design.html" class="feature-tile">
-                <div class="ft-img" style="background-image:url('assets/work/brand&visualdesign.webp')"></div>
-                <div class="ft-overlay">
-                    <h3>Brand & Visual Design</h3>
-                    <p class="ft-sub">Egységes vizuális megjelenés online és nyomtatásban.</p>
-                </div>
-            </a>
-            <a href="webdesign-uiux.html" class="feature-tile">
-                <div class="ft-img" style="background-image:url('assets/work/webdesign&uix.webp')"></div>
-                <div class="ft-overlay">
-                    <h3>Webdesign & UI/UX</h3>
-                    <p class="ft-sub">Letisztult weboldalak, ahol a látvány és a működés együtt dolgozik.</p>
-                </div>
-            </a>
-            <a href="koncepcio-kivitelezes.html" class="feature-tile">
-                <div class="ft-img" style="background-image:url('assets/work/koncepcio-es-kivitelezes.webp')"></div>
-                <div class="ft-overlay">
-                    <h3>Koncepció & Kivitelezés</h3>
-                    <p class="ft-sub">Átgondolt folyamatok, gyorsabb gyártás, pontosabb végeredmény.</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- MUNKÁIM -->
-    <section id="works">
-        <div class="container">
-            <h2 class="section-title">Munkáim</h2>
-        </div>
-        <div class="portfolio-showcase">
-            <div class="portfolio-scroller" id="portfolio-scroller"></div>
-            <div class="portfolio-dots" id="portfolio-dots"></div>
-        </div>
-    </section>
-
-    <!-- AKIKKEL EGYÜTT DOLGOZTAM -->
-    <section id="clients">
-        <div class="container">
-            <h2 class="section-title">Akikkel együtt dolgoztam</h2>
-        </div>
-        <div class="marquee">
-            <div class="marquee-track"></div>
-        </div>
-    </section>
-
-    <!-- RÓLAM -->
-    <section id="about" class="container">
-        <div class="about-content">
-            <h2 class="section-title">Rólam</h2>
-            <p>2009 óta dolgozom kreatív és nyomdai területen. <br />Reklámügynökségekkel, multinacionális vállalatokkal és kisebb vállalkozásokkal egyaránt dolgoztam már együtt.</p>
-            <p>A munkám nem áll meg a látványnál: egy projektet az első ötlettől a kész, működő végeredményig viszek végig, személyesen.</p>
-        </div>
-    </section>
-
-    <!-- DOLGOZZUNK EGYÜTT -->
-    <section id="contact" class="container">
-        <h2 class="section-title">Dolgozzunk együtt</h2>
-        <p>Van egy projekted? Vedd fel velem a kapcsolatot.</p>
-        <div class="contact-actions">
-            <a href="#" id="contact-mail" class="cta-button">Írj nekem</a>
-            <a href="#" id="contact-phone" class="btn-ghost">Hívj fel</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-social">
-            <a href="https://www.youtube.com/@mark-el" target="_blank" rel="noopener">YouTube</a>
-            <a href="https://www.linkedin.com/in/mark-lehoczki/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.instagram.com/marklehoczki/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-        <p class="footer-legal">
-            &copy; 2026 Mark-EL. Minden jog fenntartva.&nbsp;
-            <span class="footer-links">
-                <a href="impresszum.html">Impresszum</a>
-                <span class="sep">|</span>
-                <a href="adatkezeles.html">Adatkezelési tájékoztató</a>
-            </span>
-        </p>
-    </footer>
+    </main>
 
     <script src="script.js"></script>
-
-    <button id="backToTop" aria-label="Vissza a tetejére">
-        <svg viewBox="0 0 24 24" width="22" height="22" style="pointer-events:none;">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="white"/>
-        </svg>
-    </button>
 </body>
 </html>
