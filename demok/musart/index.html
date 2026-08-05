@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>museArt - Kézműves epoxi műtárgyak</title>
+<title>museArt — Kézműves epoxi műtárgyak</title>
 <meta name="description" content="Kézzel öntött, egyedi epoxi műtárgyak. Figurák, órák, sakktáblák és emlékőrzők, minden darab egyetlen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#141210;
-  --ink-soft:#2c2823;
-  --paper:#FAF9F6;
-  --stone:#F0EDE7;
-  --line:#E4DFD7;
-  --line-strong:#CFC8BD;
-  --muted:#6E6862;
-  --white:#FFFFFF;
+  --ink:#080808;
+  --ink-soft:#2B2A27;
+  --paper:#DFDBD8;
+  --stone:#CECAC4;
+  --line:#CDC8C2;
+  --line-strong:#B9B3AB;
+  --muted:#62605B;
+  --white:#EFEDEA;
 
   --ff-display:'Fraunces', Georgia, serif;
   --ff-body:'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -112,7 +112,7 @@ body::before{
   transition:background .4s ease,border-color .4s ease,box-shadow .4s ease;
   border-bottom:1px solid transparent;
 }
-.nav.scrolled{background:rgba(250,249,246,.86);backdrop-filter:blur(14px);
+.nav.scrolled{background:rgba(223,219,216,.86);backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);}
 .nav .container{display:flex;align-items:center;justify-content:space-between;width:100%}
 .brand img{height:56px;width:auto;display:block}
@@ -147,14 +147,14 @@ body::before{
     radial-gradient(38% 42% at 30% 34%, rgba(0,0,0,.06), transparent 70%),
     radial-gradient(46% 46% at 72% 62%, rgba(0,0,0,.11), transparent 72%),
     radial-gradient(30% 30% at 55% 20%, rgba(0,0,0,.05), transparent 70%),
-    linear-gradient(120deg,#ffffff 0%,#ece8e1 55%,#ded8cf 100%);}
+    linear-gradient(120deg,#EFEDEA 0%,#DCD7D0 55%,#C8C2BA 100%);}
 .hero-ph::after{content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.09' stroke-width='1'%3E%3Cpath d='M-20,120 C200,60 380,200 620,150 C860,100 980,240 1220,180'/%3E%3Cpath d='M-20,250 C220,200 360,320 640,280 C900,244 1020,300 1220,270'/%3E%3C/g%3E%3C/svg%3E");
   background-size:cover}
 .hero-scrim{position:absolute;inset:0;z-index:1;
   background:linear-gradient(90deg,
-    rgba(250,249,246,.95) 0%, rgba(250,249,246,.86) 30%,
-    rgba(250,249,246,.45) 60%, rgba(250,249,246,.05) 100%)}
+    rgba(223,219,216,.95) 0%, rgba(223,219,216,.86) 30%,
+    rgba(223,219,216,.45) 60%, rgba(223,219,216,.05) 100%)}
 .hero-inner{position:relative;z-index:2;width:100%}
 .hero-copy .eyebrow{margin-bottom:1.5rem}
 .hero-title{font-size:clamp(3rem,7.2vw,6.3rem);margin-bottom:1.8rem}
@@ -162,7 +162,7 @@ body::before{
 .hero-copy .lead{max-width:40ch;margin-bottom:2.6rem}
 .hero-actions{display:flex;flex-wrap:wrap;gap:1rem}
 .hero-badge{position:absolute;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:3;
-  background:rgba(250,249,246,.8);border:1px solid var(--line-strong);
+  background:rgba(223,219,216,.8);border:1px solid var(--line-strong);
   padding:.55rem .9rem;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
 
 /* ---------- image placeholder art (monochrome resin) ---------- */
@@ -176,7 +176,7 @@ body::before{
     radial-gradient(60% 55% at 28% 30%, rgba(0,0,0,.05), transparent 70%),
     radial-gradient(45% 45% at 74% 68%, rgba(0,0,0,.10), transparent 72%),
     radial-gradient(30% 30% at 60% 22%, rgba(0,0,0,.04), transparent 70%),
-    linear-gradient(135deg, #ffffff 0%, #edeae4 55%, #e2ddd5 100%);
+    linear-gradient(135deg, #EFEDEA 0%, #DED9D3 55%, #CBC6BF 100%);
 }
 /* fluid "resin lacing" lines */
 .ph::after{
@@ -191,15 +191,15 @@ body::before{
 .ph[data-variant="b"]::before{background:
   radial-gradient(50% 50% at 70% 28%, rgba(0,0,0,.09), transparent 70%),
   radial-gradient(55% 55% at 30% 72%, rgba(0,0,0,.06), transparent 72%),
-  linear-gradient(200deg,#ffffff 0%,#ece8e1 60%,#e0dbd2 100%);}
+  linear-gradient(200deg,#EFEDEA 0%,#DCD7D0 60%,#C9C3BB 100%);}
 .ph[data-variant="c"]::before{background:
   radial-gradient(45% 45% at 50% 30%, rgba(0,0,0,.10), transparent 70%),
   radial-gradient(40% 40% at 20% 75%, rgba(0,0,0,.05), transparent 72%),
-  linear-gradient(115deg,#fbfbfa 0%,#eae6df 55%,#ddd8cf 100%);}
+  linear-gradient(115deg,#F1EFEC 0%,#DBD6CF 55%,#C6C0B8 100%);}
 .ph[data-variant="d"]::before{background:
   radial-gradient(55% 50% at 78% 60%, rgba(0,0,0,.08), transparent 72%),
   radial-gradient(35% 35% at 32% 30%, rgba(0,0,0,.06), transparent 70%),
-  linear-gradient(160deg,#ffffff 0%,#ece8e2 58%,#e1dcd3 100%);}
+  linear-gradient(160deg,#EFEDEA 0%,#DDD8D1 58%,#CAC4BC 100%);}
 .ph[data-variant="wide"]::after{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.09' stroke-width='1'%3E%3Cpath d='M-20,120 C200,60 380,200 620,150 C860,100 980,240 1220,180'/%3E%3Cpath d='M-20,250 C220,200 360,320 640,280 C900,244 1020,300 1220,270'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -275,21 +275,21 @@ body::before{
 .cta .btn{margin:0 .4rem .8rem}
 
 /* ---------- footer ---------- */
-.footer{background:var(--ink);color:#cfc9c1;padding:clamp(3.5rem,7vh,5.5rem) 0 2.2rem}
+.footer{background:var(--ink);color:#C4C1BD;padding:clamp(3.5rem,7vh,5.5rem) 0 2.2rem}
 .footer .container{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem}
 .footer .brand-f img{height:62px;filter:invert(1) brightness(1.9);margin-bottom:1.4rem}
-.footer .brand-f p{color:#8f8a83;max-width:32ch;font-size:.9rem}
+.footer .brand-f p{color:#8B8884;max-width:32ch;font-size:.9rem}
 .footer h4{font-family:var(--ff-body);font-weight:500;font-size:.72rem;letter-spacing:.24em;
-  text-transform:uppercase;color:#8f8a83;margin-bottom:1.2rem}
+  text-transform:uppercase;color:#8B8884;margin-bottom:1.2rem}
 .footer ul{list-style:none;display:flex;flex-direction:column;gap:.75rem}
-.footer ul a{color:#cfc9c1;font-size:.92rem;transition:color .3s}
+.footer ul a{color:#C4C1BD;font-size:.92rem;transition:color .3s}
 .footer ul a:hover{color:#fff}
 .footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:3rem;padding-top:1.6rem;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
-  font-size:.78rem;color:#8f8a83}
-.footer-bottom a{color:#cfc9c1;transition:color .3s}
+  font-size:.78rem;color:#8B8884}
+.footer-bottom a{color:#C4C1BD;transition:color .3s}
 .footer-bottom a:hover{color:#fff}
-.footer-bottom .sep{color:#5f5a54;margin:0 .2rem}
+.footer-bottom .sep{color:#55524E;margin:0 .2rem}
 
 /* ---------- reveal animation ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
@@ -333,7 +333,7 @@ body::before{
   .footer .container{grid-template-columns:1fr}
   .hero{min-height:clamp(520px,82vh,760px)}
   .hero-scrim{background:linear-gradient(180deg,
-    rgba(250,249,246,.72) 0%, rgba(250,249,246,.82) 55%, rgba(250,249,246,.92) 100%)}
+    rgba(223,219,216,.72) 0%, rgba(223,219,216,.82) 55%, rgba(223,219,216,.92) 100%)}
   .hero-copy .lead{max-width:100%}
   .footer .footer-bottom{flex-direction:column;align-items:flex-start;gap:.7rem}
 }
