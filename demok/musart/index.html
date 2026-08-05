@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MuseArt - Kézműves epoxi műtárgyak</title>
+<title>museArt — Kézműves epoxi műtárgyak</title>
 <meta name="description" content="Kézzel öntött, egyedi epoxi műtárgyak. Figurák, órák, sakktáblák és emlékőrzők, minden darab egyetlen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -284,10 +284,12 @@ body::before{
 .footer ul{list-style:none;display:flex;flex-direction:column;gap:.75rem}
 .footer ul a{color:#cfc9c1;font-size:.92rem;transition:color .3s}
 .footer ul a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:3rem;padding-top:1.6rem;
-  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+.footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:3rem;padding-top:1.6rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
   font-size:.78rem;color:#8f8a83}
-.footer-bottom a{color:#cfc9c1}
+.footer-bottom a{color:#cfc9c1;transition:color .3s}
+.footer-bottom a:hover{color:#fff}
+.footer-bottom .sep{color:#5f5a54;margin:0 .2rem}
 
 /* ---------- reveal animation ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
@@ -333,6 +335,7 @@ body::before{
   .hero-scrim{background:linear-gradient(180deg,
     rgba(250,249,246,.72) 0%, rgba(250,249,246,.82) 55%, rgba(250,249,246,.92) 100%)}
   .hero-copy .lead{max-width:100%}
+  .footer .footer-bottom{flex-direction:column;align-items:flex-start;gap:.7rem}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none !important;transition:none !important;scroll-behavior:auto}
@@ -546,8 +549,8 @@ body::before{
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 museArt. Minden jog fenntartva.</span>
-    <span>Weboldal: <a href="https://mark-el.hu">Mark-EL</a></span>
+    <span class="legal">© 2026 museArt. Minden jog fenntartva. <span class="sep">|</span> <a href="#">Impresszum</a> <span class="sep">|</span> <a href="#">Adatkezelési tájékoztató</a></span>
+    <span class="credit">Designed by: <a href="https://mark-el.hu/">Mark-EL</a></span>
   </div>
 </footer>
 
