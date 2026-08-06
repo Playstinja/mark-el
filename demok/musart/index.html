@@ -253,6 +253,17 @@ body::before{
 .prices .display{font-size:clamp(1.8rem,3.4vw,2.7rem);max-width:24ch;margin:0 auto 1.3rem;line-height:1.16}
 .prices p{color:var(--muted);max-width:52ch;margin:0 auto 2.2rem}
 
+/* ---------- prices grid ---------- */
+.prices-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,1.8vw,1.5rem)}
+.pcard{background:var(--white);border:1px solid var(--line-strong);
+  padding:clamp(1.5rem,2.2vw,2.1rem);display:flex;flex-direction:column;text-align:left}
+.pcard .pcat{font-family:var(--ff-display);font-size:1.55rem;font-weight:360;line-height:1;margin-bottom:.7rem}
+.pcard .pdesc{color:var(--muted);font-size:.86rem;line-height:1.5;margin-bottom:1.4rem}
+.pcard .pprice{font-family:var(--ff-display);font-size:1.9rem;font-weight:400;line-height:1;
+  margin-top:auto;margin-bottom:1.5rem}
+.pcard .pprice span{font-family:var(--ff-body);font-size:.8rem;color:var(--muted);margin-left:.25rem}
+.pcard .pbtn{width:100%;justify-content:center;padding-left:1rem;padding-right:1rem}
+
 /* ---------- faq ---------- */
 .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,4vw,4rem);align-items:start}
 .faq-list{border-top:1px solid var(--line-strong)}
@@ -315,6 +326,7 @@ body::before{
 /* ---------- responsive ---------- */
 @media(max-width:900px){
   .about-grid{grid-template-columns:1fr}
+  .prices-grid{grid-template-columns:repeat(2,1fr)}
   .about .ph{max-width:440px}
   .faq-grid{grid-template-columns:1fr}
   .footer .container{grid-template-columns:1fr 1fr}
@@ -331,6 +343,7 @@ body::before{
   .nav-links a{font-size:1.05rem}
   .nav-cta{padding:.9rem 1.6rem !important}
   .cats{grid-template-columns:1fr}
+  .prices-grid{grid-template-columns:1fr}
   .featured .ph{aspect-ratio:4/5;min-height:0}
   .footer .container{grid-template-columns:1fr}
   .hero{min-height:clamp(520px,82vh,760px)}
@@ -464,13 +477,40 @@ body::before{
     </div>
   </section>
 
-  <!-- PRICES TEASER -->
-  <section class="section--tight stone" id="arak">
-    <div class="container prices reveal">
-      <p class="eyebrow" style="margin-bottom:1.1rem">Árak</p>
-      <p class="display">Minden darab egyedi, ezért az ár is az.</p>
-      <p>A méret, a forma és az anyag határozza meg a végösszeget. Írd meg, mit szeretnél, és pár napon belül személyre szabott ajánlatot küldök, meglepetések nélkül.</p>
-      <a href="#kapcsolat" class="btn btn--fill">Kérek ajánlatot <span class="ar">&rarr;</span></a>
+  <!-- PRICES -->
+  <section class="section stone" id="arak">
+    <div class="container">
+      <div class="head head--center reveal">
+        <p class="eyebrow">Árak</p>
+        <h2 class="display">Kiindulási árak</h2>
+        <p class="lead">Minden darab egyedi, ezért ezek tájékoztató, induló árak. Írj nekem, és pontos ajánlatot küldök a te elképzelésedre.</p>
+      </div>
+      <div class="prices-grid reveal">
+        <div class="pcard">
+          <span class="pcat">Figurák</span>
+          <p class="pdesc">Apró szobrok, dísztárgyak a polcra.</p>
+          <p class="pprice">5 900 Ft<span>-tól</span></p>
+          <a href="#kapcsolat" class="btn btn--fill pbtn">Írok!</a>
+        </div>
+        <div class="pcard">
+          <span class="pcat">Órák</span>
+          <p class="pdesc">Egyedi mintázatú falióra, ami műtárgy.</p>
+          <p class="pprice">14 900 Ft<span>-tól</span></p>
+          <a href="#kapcsolat" class="btn btn--fill pbtn">Írok!</a>
+        </div>
+        <div class="pcard">
+          <span class="pcat">Sakktáblák</span>
+          <p class="pdesc">Kézzel öntött tábla, játék és látvány.</p>
+          <p class="pprice">29 900 Ft<span>-tól</span></p>
+          <a href="#kapcsolat" class="btn btn--fill pbtn">Írok!</a>
+        </div>
+        <div class="pcard">
+          <span class="pcat">Emlékőrzők</span>
+          <p class="pdesc">Egy virág, egy dátum, egy emlék gyantában.</p>
+          <p class="pprice">8 900 Ft<span>-tól</span></p>
+          <a href="#kapcsolat" class="btn btn--fill pbtn">Írok!</a>
+        </div>
+      </div>
     </div>
   </section>
 
